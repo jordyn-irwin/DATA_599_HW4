@@ -4,7 +4,7 @@ import sys
 import re
   
 for line in sys.stdin: 
-    line = line.strip() 
-    words = re.findall(r"[a-zA-Z]+", sys.stdin.readline())
+    line = re.sub("[^A-Za-z]",text).strip() 
+    words = line.split()
     for word in words:
         print('%s\t%s' % (word, 1))
