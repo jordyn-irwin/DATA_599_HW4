@@ -1,6 +1,6 @@
 # README
 
-1. This repository was cloned : https://github.com/hadoop-sandbox/hadoop-sandbox.git
+1. This repository was cloned: https://github.com/hadoop-sandbox/hadoop-sandbox.git
    
 2. The mapper and reducer from https://github.com/cd-public/merrer/ was used and the mapper was edited.
   
