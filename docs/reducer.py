@@ -10,7 +10,8 @@ current_count = 0
 word = None
 
 for line in sys.stdin: 
-    line = re.sub("[^A-Za-z]","", line).strip() 
+    for line in sys.stdin: 
+    line = line.strip() 
     word, count = line.split('\t', 1) 
     try: 
         count = int(count) 
