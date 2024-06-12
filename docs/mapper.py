@@ -5,6 +5,6 @@ import re
   
 for line in sys.stdin: 
     line = line.strip() 
-    words = re.sub("[^A-Za-z]",line).split()
+    words = re.findall(r"[a-zA-Z]+", sys.stdin.readline())
     for word in words:
         print('%s\t%s' % (word, 1))
