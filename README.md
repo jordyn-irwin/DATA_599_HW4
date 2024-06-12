@@ -1,16 +1,22 @@
-# merrer
-M(app)er (and) R(educ)er
+# README
 
-[G4G](https://www.geeksforgeeks.org/hadoop-streaming-using-python-word-count-problem/) with comments removed, utf tag added, and converted to Python3. 
-
-Works over text files with a Python3 installed and execute permissions.
+1. This repository was cloned : https://github.com/hadoop-sandbox/hadoop-sandbox.git
+   
+2. The mapper and reducer from https://github.com/cd-public/merrer/ was used and the mapper was edited.
+  
+4. I used this mapred command:
 
 ```
+hdfs dfs -rm -r /user/sandbox/words
 mapred streaming \
-  -input ??? \
-  -output ??? \
+  -input /user/sandbox/books \
+  -output /user/sandbox/words \
   -mapper mapper.py \
   -reducer reducer.py \
-  -file mapper.py \
-  -file reducer.py
+  -file scripts/mapper.py \
+  -file scripts/reducer.py
 ```
+4. The Word Counter was tested on these books:
+   *  https://raw.githubusercontent.com/cd-public/books/main/pg1342.txt
+   *  https://raw.githubusercontent.com/cd-public/books/main/pg84.txt
+   *  https://raw.githubusercontent.com/cd-public/books/main/pg768.txt
