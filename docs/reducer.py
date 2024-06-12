@@ -2,7 +2,6 @@
 # -*-coding:utf-8 -*
   
 from operator import itemgetter
-import re
 import sys 
   
 current_word = None
